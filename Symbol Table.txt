@@ -1,0 +1,7 @@
+Symbol	Value	R/A
+PG1	0	R
+LOOP	12	R
+FOUR	16	R
+FIVE	20	R
+TEMP	24	R
+MINA	32	A

@@ -1,0 +1,4 @@
+Literal	Value	R/A
+F'10'	8		R
+F'4'	16		R
+F'5'	20		R
