@@ -88,19 +88,28 @@ with open("input.txt", "r") as file:
 with open('Pass1.txt',"w") as f:
     f.write(pass1)
 
-ST = ''
+ST = 'Symbol\tValue\tR/A\n'
 for i in SymbolTable:
-    ST = ST + i + " " + str(SymbolTable[i][0]) + " " + SymbolTable[i][1] + "\n"
+    ST = ST + i + "\t" + str(SymbolTable[i][0]) + "\t" + SymbolTable[i][1] + "\n"
 
-with open('Symbol.txt',"w") as f:
+with open('Symbol Table.txt',"w") as f:
     f.write(ST)
 
-LT = ''
+LT = 'Literal\tValue\tR/A\n'
 for i in LiteralTable:
-    LT = LT + i + " " + str(LiteralTable[i][0]) + " " + LiteralTable[i][1] + "\n"
+    LT = LT + i + "\t" + str(LiteralTable[i][0]) + "\t\t" + LiteralTable[i][1] + "\n"
 
-with open('Literal.txt',"w") as f:
+with open('Literal Table.txt',"w") as f:
     f.write(LT)
+
+s = 'RegesterNumber' + '\tContent\n'
+for i in BaseTable:
+    s = s + str(i) + '\t\t\t\t' +str(BaseTable[i])
+
+with open('Base Table.txt','w') as f:
+    f.write(s)
+    
+# PASS 2
 for i in SymbolTable:
     if i in pass1:
         pass1 = pass1.replace(i,str(SymbolTable[i][0]))
